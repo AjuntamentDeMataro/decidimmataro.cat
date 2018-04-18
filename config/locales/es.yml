@@ -1,0 +1,94 @@
+es:
+  census_authorization_handler:
+    invalid_document: Número de documento incorrecto
+  activemodel:
+    attributes:
+      census_authorization_handler:
+        document_number: Número de documento de identidad
+        document_type: Tipo de documento
+        postal_code: Código postal
+        date_of_birth: Fecha de nacimiento
+        scope: Barrio
+      proposal:
+        category_id: Ámbito
+        scope_id: Alcance Territorial
+      user:
+        user_group_document_number: Número de Inscripción en el Registro Municipal de Entidades
+  census_authorization:
+    form:
+      scope_prompt: Por favor, selecciona tu barrio
+      date_select:
+        day: "Día"
+        month: "Mes"
+        year: "Año"
+      male: Hombre
+      female: Mujer
+  decidim:
+    authorizations:
+      new:
+        authorize: Verificar
+    authorization_handlers:
+      decidim:
+        verifications:
+          authorizations:
+            new:
+              name: Padrón
+      census_authorization_handler:
+        explanation: Autorización
+        name: Padrón
+        fields:
+          document_number: Número de documento de identidad
+          document_type: Tipo de documento
+          postal_code: Código postal
+          date_of_birth: Fecha de nacimiento
+          scope_id: Barrio
+    census_authorization_handler:
+      document_types:
+        dni: DNI
+        nie: NIE
+        passport: Pasaporte
+    proposals:
+      admin:
+        proposal_answers:
+          edit:
+            rejected: Descartada
+      answers:
+        rejected: Descartada
+      proposals:
+        filters:
+          scopes: Alcance Territorial
+          category: Ámbito
+          rejected: Descartadas
+          official: Oficial
+          related_to: Propuestas
+          activity: Soportes
+          voted: Con soportes
+          all: Todas
+        show:
+          proposal_rejected_reason: 'Esta propuesta ha estado descartada porque:'
+        votes_limit:
+          vote_limit:
+            description: A cada propuesta sólo le puedes otorgar un apoyo.
+            title: Dispones de %{limit} apoyos a distribuir entre las propuestas realizadas por los ciudadanos/nas.
+    results:
+      results:
+        filters:
+          category: Ámbito
+          scopes: Alcance Territorial
+    budgets:
+      projects:
+        filters:
+          category: Ámbito
+          scopes: Alcance Territorial
+    meetings:
+      meetings:
+        filters:
+          category: Ámbito
+          scopes: Alcance Territorial
+  pages:
+    home:
+      extended:
+        debates_explanation: Espacios para informarse y decidir sobre las propuestas de cada proceso.
+  errors:
+    messages:
+      not_in_district: El código postal no pertenece al distrito

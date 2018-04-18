@@ -1,0 +1,95 @@
+ca:
+  census_authorization_handler:
+    invalid_document: Número de document incorrecte
+  activemodel:
+    attributes:
+      census_authorization_handler:
+        document_number: Número de document d'identitat
+        document_type: Tipus de document
+        postal_code: Codi postal
+        date_of_birth: Data de naixement
+        scope_id: Barri
+      proposal:
+        category_id: Àmbit
+        scope_id: Abast Territorial
+      user:
+        user_group_document_number: Número d’Inscripció al Registre Municipal d’Entitats
+  census_authorization:
+    form:
+      scope_prompt: Si us plau, selecciona el teu barri
+      date_select:
+        day: "Dia"
+        month: "Mes"
+        year: "Any"
+      male: Home
+      female: Dona
+  decidim:
+    authorizations:
+      new:
+        authorize: Verificar
+    authorization_handlers:
+      decidim:
+        verifications:
+          authorizations:
+            new:
+              name: Padrón
+      census_authorization_handler:
+        explanation: Autorización
+        name: Padrón
+        fields:
+          document_number: Número de document d'identitat
+          document_type: Tipus de document
+          postal_code: Codi postal
+          date_of_birth: Data de naixement
+          scope: Barri
+        name: Padró
+    census_authorization_handler:
+      document_types:
+        dni: DNI
+        nie: NIE
+        passport: Passaport
+    proposals:
+      admin:
+        proposal_answers:
+          edit:
+            rejected: Descartada
+      answers:
+        rejected: Descartada
+      proposals:
+        filters:
+          scopes: Abast Territorial
+          category: Àmbit
+          rejected: Descartades
+          official: Oficial
+          related_to: Propostes
+          activity: Suports
+          voted: Amb suports
+          all: Totes
+        show:
+          proposal_rejected_reason: 'Aquesta proposta ha estat descartada perquè:'
+        votes_limit:
+          vote_limit:
+            description: A cada proposta només li pots atorgar un suport.
+            title: Disposes de %{limit} suports a distribuir entre les propostes realitzades pels ciutadans/es.
+    results:
+      results:
+        filters:
+          category: Àmbit
+          scopes: Abast Territorial
+    budgets:
+      projects:
+        filters:
+          category: Àmbit
+          scopes: Abast Territorial
+    meetings:
+      meetings:
+        filters:
+          category: Àmbit
+          scopes: Abast Territorial
+  pages:
+    home:
+      extended:
+        debates_explanation: Espais per informar-te i decidir sobre les propostes de cada procés.
+  errors:
+    messages:
+      not_in_district: El codi postal no pertany al districte
