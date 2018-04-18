@@ -11,6 +11,9 @@ gem "uglifier", "~> 4.1"
 
 gem "faker", "~> 1.8"
 
+gem "delayed_job_active_record", "~> 4.1.2"
+gem "daemons", "~> 1.2.6"
+
 group :development, :test do
   gem "byebug", "~> 10.0", platform: :mri
 
