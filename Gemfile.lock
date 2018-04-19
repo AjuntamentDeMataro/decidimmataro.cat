@@ -43,6 +43,9 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
+    airbrake (5.8.1)
+      airbrake-ruby (~> 1.8)
+    airbrake-ruby (1.8.0)
     airbrussh (1.3.0)
       sshkit (>= 1.6.1, != 1.7.0)
     arel (8.0.0)
@@ -593,6 +596,8 @@ GEM
       coercible (~> 1.0)
       descendants_tracker (~> 0.0, >= 0.0.3)
       equalizer (~> 0.0, >= 0.0.9)
+    virtus-multiparams (0.1.1)
+      virtus (~> 1.0)
     warden (1.2.7)
       rack (>= 1.0)
     web-console (3.5.1)
@@ -616,6 +621,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  airbrake (~> 5.0)
   byebug (~> 10.0)
   capistrano (= 3.8.0)
   capistrano-bundler (~> 1.2)
@@ -634,10 +640,11 @@ DEPENDENCIES
   spring (~> 2.0)
   spring-watcher-listen (~> 2.0)
   uglifier (~> 4.1)
+  virtus-multiparams
   web-console (~> 3.5)
 
 RUBY VERSION
-   ruby 2.4.0p0
+   ruby 2.5.0p0
 
 BUNDLED WITH
    1.16.1
