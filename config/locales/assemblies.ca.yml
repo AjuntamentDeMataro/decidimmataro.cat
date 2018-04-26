@@ -39,8 +39,8 @@ ca:
         new:
           title: Nou usuari de l'òrgan.
         update:
-          error: S'ha produït un error en l'actualització d'un usuari per a aquesta assemblea.
-          success: L'usuari s'ha actualitzat correctament per a aquesta assemblea.
+          error: S'ha produït un error en l'actualització d'un usuari per a aquest òrgan.
+          success: L'usuari s'ha actualitzat correctament per a aquest òrgan.
       menu:
         assemblies: Òrgans de participació
         assemblies_submenu:
