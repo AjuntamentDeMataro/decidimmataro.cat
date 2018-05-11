@@ -7,7 +7,7 @@
 </div>
 
 <div class="field">
-  <%= form.select :scope_id, Decidim::Scope.where.not(name: 'Ciutat').collect{|s| [s.name, s.id] }, label: t(".scope_prompt") %>
+  <%= form.collection_select :scope_id, current_organization.scopes.select {|scope| scope.name["ca"] != "Ciutat" }, :id, ->(scope){ translated_attribute(scope.name) }, prompt: t(".scope_prompt") %>
 </div>
 
 <div class="field">
