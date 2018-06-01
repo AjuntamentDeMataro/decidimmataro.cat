@@ -4,7 +4,9 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-gem "decidim", "0.10.1"
+DECIDIM_VERSION = {git: "https://github.com/decidim/decidim"}
+
+gem "decidim", DECIDIM_VERSION
 
 gem "puma", "~> 3.0"
 gem "uglifier", "~> 4.1"
@@ -19,7 +21,7 @@ gem "virtus-multiparams"
 group :development, :test do
   gem "byebug", "~> 10.0", platform: :mri
 
-  gem "decidim-dev", "0.10.1"
+  gem "decidim-dev", DECIDIM_VERSION
 end
 
 group :development do
