@@ -11,7 +11,7 @@ namespace :statistics do
           name: 'census_authorization_handler',
           decidim_user_id: project.orders.pluck(:decidim_user_id)
         ).pluck(:metadata).each do |user|
-          file << "#{user['scope']['es']},#{user['gender']},#{date_to_years user['date_of_birth']},#{project.title['es']}\n"
+          file << "#{user['scope']['ca']},#{user['gender']},#{date_to_years user['date_of_birth']},#{project.title['ca']}\n"
         end
       end
       puts "Output file: #{file.path}"
