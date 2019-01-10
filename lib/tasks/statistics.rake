@@ -5,13 +5,13 @@ namespace :statistics do
   task :budgets, [:id] => :environment do |_task, args|
     if args[:id]
       file = File.open("decidim_budgets_#{args[:id]}_statistics.csv", 'w')
-      file << "city,gender,age,project\n"
+      file << "city,gender,age,id,username,project\n"
       Decidim::Budgets::Project.where(decidim_component_id: args[:id]).each do |project|
         Decidim::Authorization.where(
           name: 'census_authorization_handler',
           decidim_user_id: project.orders.pluck(:decidim_user_id)
-        ).pluck(:metadata).each do |user|
-          file << "#{user['scope']['ca']},#{user['gender']},#{date_to_years user['date_of_birth']},#{project.title['ca']}\n"
+        ).each do |data|
+          file << "#{data.metadata['scope']['ca']},#{data.metadata['gender']},#{date_to_years data.metadata['date_of_birth']},#{data.user.id},#{data.user.nickname},#{project.title['ca']}\n"
         end
       end
       puts "Output file: #{file.path}"
@@ -24,11 +24,12 @@ namespace :statistics do
   desc 'Get general decidim statistics'
   task general: :environment do
     file = File.open('decidim_general_statistics.csv', 'w')
-    file << "city,gender,age\n"
+    file << "city,gender,age,user_id,username\n"
     Decidim::Authorization.where(
       name: 'census_authorization_handler'
-    ).pluck(:metadata).each do |user|
-      file << "#{user['scope']['es']},#{user['gender']},#{date_to_years user['date_of_birth']}\n"
+    ).each do |data|
+      byebug
+      file << "#{data.metadata['scope']['es']},#{data.metadata['gender']},#{date_to_years data.metadata['date_of_birth']},#{data.user.id},#{data.user.nickname}\n"
     end
     puts "Output file: #{file.path}"
     file.close
