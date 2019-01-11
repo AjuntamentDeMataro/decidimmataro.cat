@@ -28,7 +28,6 @@ namespace :statistics do
     Decidim::Authorization.where(
       name: 'census_authorization_handler'
     ).each do |data|
-      byebug
       file << "#{data.metadata['scope']['es']},#{data.metadata['gender']},#{date_to_years data.metadata['date_of_birth']},#{data.user.id},#{data.user.nickname}\n"
     end
     puts "Output file: #{file.path}"
