@@ -4,6 +4,35 @@ Citizen Participation and Open Government application.
 
 This is the open-source repository for DecidimMataro, based on [Decidim](https://github.com/decidim/decidim).
 
+## Installation
+
+### Development
+
+Clone this repository, go to the directory and starts with docker-compose
+
+```bash
+git clone https://github.com/AjMalgrat/decidim-malgrat
+cd decidim-malgrat/
+docker-compose up
+docker-compose run app rails db:create
+docker-compose run app rails db:migrate
+docker-compose run app rails db:seed
+```
+
+Go to http://localhost:3000/
+
+### Staging
+
+```bash
+docker-compose run app bundle exec cap staging deploy
+```
+
+### Production
+
+```bash
+docker-compose run app bundle exec cap production deploy
+```
+
 ## Setting up the application
 
 You will need to do some steps before having the app working properly once you've deployed it:
