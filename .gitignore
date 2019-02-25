@@ -24,3 +24,6 @@
 
 # Ignore public uploads
 public/uploads
+
+# Ignore statistics output files
+decidim_*.csv

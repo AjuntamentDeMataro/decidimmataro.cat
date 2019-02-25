@@ -4,9 +4,11 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = {git: "https://github.com/decidim/decidim"}
+DECIDIM_VERSION = "0.15.2"
 
 gem "decidim", DECIDIM_VERSION
+gem "decidim-consultations"
+# gem "decidim-initiatives"
 
 gem "puma", "~> 3.0"
 gem "uglifier", "~> 4.1"
