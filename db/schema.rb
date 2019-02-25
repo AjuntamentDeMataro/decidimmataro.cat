@@ -972,7 +972,7 @@ ActiveRecord::Schema.define(version: 2019_02_05_125396) do
     t.bigint "decidim_author_id", null: false
     t.bigint "decidim_user_group_id"
     t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "updated_at", null: false 
     t.string "decidim_author_type", null: false
     t.index "decidim_proposal_id, decidim_author_id, COALESCE(decidim_user_group_id, ('-1'::integer)::bigint)", name: "decidim_proposals_proposal_endorsmt_proposal_auth_ugroup_uniq", unique: true
     t.index ["decidim_author_id", "decidim_author_type"], name: "index_decidim_proposals_proposal_endorsements_on_decidim_author"
