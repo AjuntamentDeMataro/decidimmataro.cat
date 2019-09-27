@@ -11,8 +11,8 @@ This is the open-source repository for DecidimMataro, based on [Decidim](https:/
 Clone this repository, go to the directory and starts with docker-compose
 
 ```bash
-git clone https://github.com/AjMalgrat/decidim-malgrat
-cd decidim-malgrat/
+git clone https://github.com/AjuntamentDeMataro/decidimmataro.cat
+cd decidimmataro.cat/
 docker-compose up
 docker-compose run app rails db:create
 docker-compose run app rails db:migrate
