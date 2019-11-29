@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_17_072091) do
+ActiveRecord::Schema.define(version: 2019_11_29_034637) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -413,6 +413,9 @@ ActiveRecord::Schema.define(version: 2019_09_17_072091) do
     t.integer "responses_count", default: 0, null: false
     t.string "hero_image"
     t.integer "order"
+    t.integer "max_votes"
+    t.integer "min_votes"
+    t.jsonb "instructions"
     t.index ["decidim_consultation_id"], name: "index_consultations_questions_on_consultation_id"
     t.index ["decidim_organization_id", "slug"], name: "index_unique_question_slug_and_organization", unique: true
     t.index ["decidim_scope_id"], name: "index_decidim_consultations_questions_on_decidim_scope_id"
@@ -815,6 +818,7 @@ ActiveRecord::Schema.define(version: 2019_09_17_072091) do
     t.string "related_object_type"
     t.bigint "related_object_id"
     t.bigint "decidim_category_id"
+    t.index ["day", "metric_type", "decidim_organization_id", "participatory_space_type", "participatory_space_id", "related_object_type", "related_object_id", "decidim_category_id"], name: "idx_metric_by_day_type_org_space_object_category", unique: true
     t.index ["day"], name: "index_decidim_metrics_on_day"
     t.index ["decidim_category_id"], name: "index_decidim_metrics_on_decidim_category_id"
     t.index ["decidim_organization_id"], name: "index_decidim_metrics_on_decidim_organization_id"
@@ -912,6 +916,7 @@ ActiveRecord::Schema.define(version: 2019_09_17_072091) do
     t.boolean "user_groups_enabled", default: false, null: false
     t.jsonb "smtp_settings"
     t.jsonb "colors", default: {}
+    t.boolean "force_users_to_authenticate_before_access_organization", default: false
     t.index ["host"], name: "index_decidim_organizations_on_host", unique: true
     t.index ["name"], name: "index_decidim_organizations_on_name", unique: true
   end
@@ -1465,6 +1470,7 @@ ActiveRecord::Schema.define(version: 2019_09_17_072091) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "type"
+    t.boolean "confidential", default: true, null: false
     t.index ["decidim_organization_id"], name: "index_oauth_applications_on_decidim_organization_id"
     t.index ["uid"], name: "index_oauth_applications_on_uid", unique: true
   end
