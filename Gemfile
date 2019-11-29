@@ -4,9 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "0.18-stable" }
-
-gem "decidim", DECIDIM_VERSION
+gem "decidim", git: "https://github.com/decidim/decidim", branch: "0.19-stable"
 gem "decidim-consultations"
 # gem "decidim-initiatives"
 
@@ -15,15 +13,14 @@ gem "uglifier", "~> 4.1"
 
 gem "faker", "~> 1.8"
 
-gem "delayed_job_active_record", "~> 4.1.2"
-gem "daemons", "~> 1.2.6"
 gem "airbrake", "~> 5.0"
+gem "daemons", "~> 1.2.6"
+gem "delayed_job_active_record", "~> 4.1.2"
 gem "virtus-multiparams"
 
 group :development, :test do
   gem "byebug", "~> 10.0", platform: :mri
-
-  gem "decidim-dev", DECIDIM_VERSION
+  gem "decidim-dev"
 end
 
 group :development do
@@ -40,5 +37,4 @@ group :development do
   gem "capistrano-rails", "1.1.8", require: false
   gem "capistrano-rbenv"
   gem "capistrano3-delayed-job", "~> 1.0"
-
 end
