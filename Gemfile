@@ -8,7 +8,7 @@ gem "decidim", git: "https://github.com/decidim/decidim", branch: "0.19-stable"
 gem "decidim-consultations"
 # gem "decidim-initiatives"
 
-gem "puma", "~> 3.0"
+gem "puma", "~> 3.12"
 gem "uglifier", "~> 4.1"
 
 gem "faker", "~> 1.8"
