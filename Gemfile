@@ -4,11 +4,12 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-gem "decidim", git: "https://github.com/decidim/decidim", branch: "0.19-stable"
-gem "decidim-consultations"
-# gem "decidim-initiatives"
+gem "decidim", "0.21.0"
+gem "decidim-consultations", "0.21.0"
+#gem "decidim-initiatives", "0.21.0"
+#gem "decidim-conferences", "0.21.0"
 
-gem "puma", "~> 3.0"
+gem "puma", ">= 4.3"
 gem "uglifier", "~> 4.1"
 
 gem "faker", "~> 1.8"
@@ -19,8 +20,8 @@ gem "delayed_job_active_record", "~> 4.1.2"
 gem "virtus-multiparams"
 
 group :development, :test do
-  gem "byebug", "~> 10.0", platform: :mri
-  gem "decidim-dev"
+  gem "byebug", "~> 11.0", platform: :mri
+  gem "decidim-dev", "0.21.0"
 end
 
 group :development do
