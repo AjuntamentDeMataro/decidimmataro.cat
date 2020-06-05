@@ -86,6 +86,23 @@ ca:
         filters:
           category: Àmbit
           scopes: Abast Territorial
+    components:
+      jitsi_meetings:
+        name: Jitsi Meetings
+        settings:
+          global:
+            announcement: Announcement
+          step:
+            announcement: Announcement
+    jitsi_meetings:
+      admin:
+        jitsi_meetings:
+          edit:
+            title: Jitsi Meeting
+            save: 'Save'
+        models:
+          components:
+            url: 'Url'
   pages:
     home:
       extended:

@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/alabs/decidim-module-jitsi-meetings.git
+  revision: 7e297aca4a9f9c697346f0bec68e405858c7246b
+  specs:
+    decidim-jitsi_meetings (0.21.0)
+      decidim-core (= 0.21.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -789,6 +796,7 @@ DEPENDENCIES
   decidim (= 0.21.0)
   decidim-consultations (= 0.21.0)
   decidim-dev (= 0.21.0)
+  decidim-jitsi_meetings!
   delayed_job_active_record (~> 4.1.2)
   faker (~> 1.8)
   letter_opener_web (~> 1.3)
