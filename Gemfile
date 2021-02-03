@@ -4,11 +4,11 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-gem "decidim", "0.23.1"
-gem "decidim-consultations", "0.23.1"
-#gem "decidim-jitsi_meetings", git: "https://github.com/alabs/decidim-module-jitsi-meetings.git"
-#gem "decidim-initiatives", "0.23.1"
-#gem "decidim-conferences", "0.23.1"
+gem "decidim", "0.21.0"
+gem "decidim-consultations", "0.21.0"
+gem "decidim-jitsi_meetings", git: "https://github.com/alabs/decidim-module-jitsi-meetings.git"
+#gem "decidim-initiatives", "0.21.0"
+#gem "decidim-conferences", "0.21.0"
 
 gem "puma", ">= 4.3"
 gem "uglifier", "~> 4.1"
@@ -22,7 +22,7 @@ gem "virtus-multiparams"
 
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
-  gem "decidim-dev", "0.23.1"
+  gem "decidim-dev", "0.21.0"
 end
 
 group :development do
