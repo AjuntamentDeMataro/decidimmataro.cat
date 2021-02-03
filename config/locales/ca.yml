@@ -110,3 +110,5 @@ ca:
   errors:
     messages:
       not_in_district: El codi postal no pertany al districte
+  menu:
+    normativa: Participació en normativa

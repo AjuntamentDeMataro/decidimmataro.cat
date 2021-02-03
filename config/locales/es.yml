@@ -109,3 +109,5 @@ es:
   errors:
     messages:
       not_in_district: El código postal no pertenece al distrito
+  menu:
+    normativa: Participación en normativa
