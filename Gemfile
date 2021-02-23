@@ -6,9 +6,9 @@ ruby RUBY_VERSION
 
 gem "decidim", "0.21.0"
 gem "decidim-consultations", "0.21.0"
-#gem "decidim-jitsi_meetings", git: "https://github.com/alabs/decidim-module-jitsi-meetings.git"
+gem "decidim-jitsi_meetings", git: "https://github.com/alabs/decidim-module-jitsi-meetings.git"
 #gem "decidim-initiatives", "0.21.0"
-#gem "decidim-conferences", "0.21.0"
+gem "decidim-conferences", "0.21.0"
 
 gem "puma", ">= 4.3"
 gem "uglifier", "~> 4.1"
