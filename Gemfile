@@ -7,10 +7,11 @@ ruby RUBY_VERSION
 DECIDIM_VERSION = "0.23.1"
 
 gem "decidim", DECIDIM_VERSION
-gem "decidim-consultations"
+gem "decidim-consultations", DECIDIM_VERSION
+gem "decidim-conferences", DECIDIM_VERSION
 # gem "decidim-initiatives"
 
-gem "puma", "~> 3.0"
+gem "puma", ">= 4.3"
 gem "uglifier", "~> 4.1"
 
 gem "faker", "~> 1.8"
@@ -21,7 +22,7 @@ gem "airbrake", "~> 5.0"
 gem "virtus-multiparams"
 
 group :development, :test do
-  gem "byebug", "~> 10.0", platform: :mri
+  gem "byebug", "~> 11.0", platform: :mri
 
   gem "decidim-dev", DECIDIM_VERSION
 end
