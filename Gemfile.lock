@@ -212,6 +212,11 @@ GEM
       decidim-core (= 0.21.0)
       jquery-rails (~> 4.3)
       redcarpet (~> 3.4)
+    decidim-conferences (0.21.0)
+      decidim-core (= 0.21.0)
+      decidim-meetings (= 0.21.0)
+      wicked_pdf (~> 1.4)
+      wkhtmltopdf-binary (~> 0.12)
     decidim-consultations (0.21.0)
       decidim-admin (= 0.21.0)
       decidim-comments (= 0.21.0)
@@ -785,8 +790,11 @@ GEM
     websocket-driver (0.7.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    wicked_pdf (1.4.0)
+      activesupport
     wisper (2.0.1)
     wisper-rspec (1.1.0)
+    wkhtmltopdf-binary (0.12.6.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
 
@@ -804,6 +812,7 @@ DEPENDENCIES
   capistrano3-delayed-job (~> 1.0)
   daemons (~> 1.2.6)
   decidim (= 0.21.0)
+  decidim-conferences (= 0.21.0)
   decidim-consultations (= 0.21.0)
   decidim-dev (= 0.21.0)
   decidim-jitsi_meetings!
