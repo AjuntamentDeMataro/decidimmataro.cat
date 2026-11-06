@@ -1,0 +1,10 @@
+es:
+  decidim:
+    census_authorization_handler:
+      blocked:
+        blocked_indefinite: "Usuario bloqueado indefinidamente. Contacte con el departamento de participación del Ayuntamiento de Mataró.\n"
+        blocked_temporary: "Debe esperar %{minutes} minutos y %{seconds} segundos antes de volver a intentarlo.\n"
+      warnings_for_user:
+        remaining_attempts: "Datos incorrectos, le quedan %{remaining} intentos de 6.\n"
+        three_attempts: "Ha introducido datos erróneos 3 veces, por favor revise sus datos.\n"
+        no_more_attempts: "Superó el número maximo de intentos.\n Por favor póngase en contacto con el departamento de participación del Ayuntamiento de Mataró.\n"

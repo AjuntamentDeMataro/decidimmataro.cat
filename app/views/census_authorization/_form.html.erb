@@ -1,0 +1,29 @@
+<div class="field">
+  <%= form.text_field :document_number %>
+  <span class="text-medium"> <%= t(".dniinfo") %> </span>
+</div>
+
+<br>
+
+<div class="field">
+  <%= form.date_field :date_of_birth %>
+  <span class="text-medium"> <%= t(".dobinfo") %> </span>
+</div>
+
+<br>
+
+<div class="field">
+  <%= form.collection_select :scope_id, current_organization.scopes.select {|scope| scope.name["ca"] != "Ciutat" }, :id, ->(scope){ translated_attribute(scope.name) }, prompt: t(".scope_prompt") %>
+</div>
+
+<br>
+
+<div class="field">
+  <%= form.radio_button :gender, "male", label: t(".male") %>
+  <%= form.radio_button :gender, "female", label: t(".female") %>
+</div>
+
+<br>
+
+<%= form.hidden_field :handler_name %>
+
